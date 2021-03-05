@@ -1,5 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
+import { Link } from "@reach/router";
+
 import Header from "./Header";
 
 const SearchSection = Styled.section``;
@@ -36,7 +38,18 @@ const RestaurantItem = Styled.li`
   width: 304px;
 `;
 
+const Image = Styled.img``;
+const Name = Styled.h3``;
+const Rating = Styled.div``;
+const Cuisine = Styled.span``;
+const Price = Styled.span``;
+const Status = Styled.span``;
+const LearnMoreLink = Styled(Link)``;
+
 const resultsTitle = "All Restaurants";
+const name = "Very Long Name Restaurants Number 1 In List";
+const learnMore = "Learn More";
+const id = "1";
 
 const Home = () => (
   <>
@@ -46,7 +59,15 @@ const Home = () => (
       <SearchResults>
         <ResultsTitle>{resultsTitle}</ResultsTitle>
         <RestaurantList>
-          <RestaurantItem />
+          <RestaurantItem>
+            <Image />
+            <Name>{name}</Name>
+            <Rating />
+            <Cuisine />
+            <Price />
+            <Status />
+            <LearnMoreLink to={`/details/${id}`}>{learnMore}</LearnMoreLink>
+          </RestaurantItem>
         </RestaurantList>
       </SearchResults>
     </SearchSection>

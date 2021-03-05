@@ -4,6 +4,8 @@
   "description": "A test for superformula",
   "main": "index.html",
   "scripts": {
+    "start": "parcel serve -p 8080 ./src/index.html",
+    "build": "parcel build ./src/index.html",
     "lint": "healthier && prettier --check '**/*.{js,json,css}'",
     "format": "prettier --write '**/*.{js,json,css,yml}'"
   },

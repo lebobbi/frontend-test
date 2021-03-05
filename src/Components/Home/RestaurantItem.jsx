@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import Styled from "styled-components";
 import { Link } from "@reach/router";
 
+import Information from "./Information";
+
 const Item = Styled.li`
   display: flex;
   flex-direction: column;
@@ -32,9 +34,6 @@ const Name = Styled.h3`
 `;
 
 const Rating = Styled.div``;
-const Cuisine = Styled.span``;
-const Price = Styled.span``;
-const Status = Styled.span``;
 const LearnMoreLink = Styled(Link)`
   align-items: center;
   align-self: flex-end;
@@ -55,15 +54,21 @@ const LearnMoreLink = Styled(Link)`
 
 const learnMore = "Learn More";
 
-const RestaurantItem = ({ id, name, image, imageAlt }) => (
+const RestaurantItem = ({
+  id,
+  name,
+  image,
+  imageAlt,
+  status,
+  cuisine,
+  price,
+}) => (
   <Item>
     <Details>
       <Image src={image} alt={imageAlt} />
       <Name>{name}</Name>
       <Rating />
-      <Cuisine />
-      <Price />
-      <Status />
+      <Information cuisine={cuisine} price={price} status={status} />
     </Details>
     <LearnMoreLink to={`/details/${id}`}>{learnMore}</LearnMoreLink>
   </Item>

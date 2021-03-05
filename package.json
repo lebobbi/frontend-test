@@ -4,7 +4,8 @@
   "description": "A test for superformula",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "healthier && prettier --check '**/*.{js,json,css}'",
+    "format": "prettier --write '**/*.{js,json,css,yml}'"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,9 @@
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "healthier": "^4.0.0",
+    "prettier": "^2.2.1"
   }
 }

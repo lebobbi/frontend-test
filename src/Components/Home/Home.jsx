@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 
+import { Button } from "~/src/Components/Common";
 import Header from "./Header";
 import RestaurantList from "./RestaurantList";
 
@@ -27,7 +28,14 @@ const ResultsTitle = Styled.h2`
   line-height: 40px;
 `;
 
+const LoadMoreButton = Styled(Button)`
+  display: block;
+  margin: 0 auto 242px;
+  width: 416px;
+`;
+
 const resultsTitle = "All Restaurants";
+const loadMore = "Load More";
 
 const Home = () => (
   <>
@@ -38,6 +46,7 @@ const Home = () => (
         <ResultsTitle>{resultsTitle}</ResultsTitle>
         <RestaurantList />
       </SearchResults>
+      <LoadMoreButton>{loadMore}</LoadMoreButton>
     </SearchSection>
   </>
 );

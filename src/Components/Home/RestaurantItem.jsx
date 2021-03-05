@@ -5,6 +5,7 @@ import { Link } from "@reach/router";
 
 import Information from "./Information";
 import { Rating } from "~/src/Components/Common";
+import { buttonStyles } from "~/src/Components/Common/Button";
 
 const Item = Styled.li`
   display: flex;
@@ -35,20 +36,13 @@ const Name = Styled.h3`
 `;
 
 const LearnMoreLink = Styled(Link)`
+  ${buttonStyles}
   align-items: center;
   align-self: flex-end;
   background: #002b56;
-  border: 1px solid #002b56;
-  border-radius: 2px;
   color: #ffffff;
-  cursor: pointer;
   display: flex;
-  font-size: 14px;
-  height: 48px;
   justify-content: center;
-  letter-spacing: 0.857143px;
-  line-height: 16px;
-  text-transform: uppercase;
   width: 100%;
 `;
 

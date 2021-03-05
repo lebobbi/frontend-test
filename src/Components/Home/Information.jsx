@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Styled from "styled-components";
-import { Category } from "~/src/Components/Common";
+import { Category, Status } from "~/src/Components/Common";
 
 const Wrapper = Styled.div`
   color: #757575;
@@ -13,7 +13,6 @@ const Wrapper = Styled.div`
   margin: 16px 0 20px;
   text-transform: uppercase;
 `;
-const Status = Styled.span``;
 
 const Information = ({ cuisine, price, status }) => (
   <Wrapper>

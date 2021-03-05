@@ -4,17 +4,9 @@ import Styled from "styled-components";
 import { Button } from "~/src/Components/Common";
 import Header from "./Header";
 import RestaurantList from "./RestaurantList";
+import FilterNav from "~/src/Components/FilterNav";
 
 const SearchSection = Styled.section``;
-
-const FilterNav = Styled.header`
-  border: 1px solid #e6e6e6;
-  border-left: none;
-  border-right: none;
-  box-sizing: border-box;
-  height: 80px;
-  width: 100%;
-`;
 
 const SearchResults = Styled.main`
   margin: 36px 32px 242px 64px;

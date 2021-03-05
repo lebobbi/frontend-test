@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { render } from "react-dom";
 import { Router } from "@reach/router";
-import { Home, Details } from "~/src/Components/Pages";
+import { Home, Details } from "~/src/Components";
 import GlobalStyles from "~/src/GlobalStyles";
 
 const App = memo(() => (

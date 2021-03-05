@@ -4,6 +4,7 @@ import Styled from "styled-components";
 import { Link } from "@reach/router";
 
 import Information from "./Information";
+import { Rating } from "~/src/Components/Common";
 
 const Item = Styled.li`
   display: flex;
@@ -33,7 +34,6 @@ const Name = Styled.h3`
   margin: 16px 0 8px;
 `;
 
-const Rating = Styled.div``;
 const LearnMoreLink = Styled(Link)`
   align-items: center;
   align-self: flex-end;
@@ -59,6 +59,7 @@ const RestaurantItem = ({
   name,
   image,
   imageAlt,
+  rating,
   status,
   cuisine,
   price,
@@ -67,7 +68,7 @@ const RestaurantItem = ({
     <Details>
       <Image src={image} alt={imageAlt} />
       <Name>{name}</Name>
-      <Rating />
+      <Rating rating={rating} />
       <Information cuisine={cuisine} price={price} status={status} />
     </Details>
     <LearnMoreLink to={`/details/${id}`}>{learnMore}</LearnMoreLink>
@@ -75,15 +76,18 @@ const RestaurantItem = ({
 );
 
 RestaurantItem.defaultProps = {
-  id: "1",
-  name: "Very Long Name Restaurants Number 1 In List",
+  name: "",
   image: "",
   imageAlt: "Restaurant Image",
 };
 
 RestaurantItem.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.number.isRequired,
   name: PropTypes.string,
+  rating: PropTypes.number,
+  cuisine: PropTypes.string,
+  status: PropTypes.bool,
+  price: PropTypes.string,
   image: PropTypes.string,
   imageAlt: PropTypes.string,
 };

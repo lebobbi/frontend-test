@@ -16,8 +16,8 @@ const Star = ({ type }) => {
       <title>A {type} Star</title>
       <description>Rating star</description>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M9.99999 0.140015L12.76 7.54001H19.76L13.86 11.98L16.72 19.44L9.99999 14.4L3.29999 19.44L6.13999 11.98L0.23999 7.54001H7.21999L9.99999 0.140015Z"
         {...pathProps}
       />

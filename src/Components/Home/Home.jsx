@@ -2,7 +2,7 @@ import React from "react";
 import Styled from "styled-components";
 
 import Header from "./Header";
-import RestaurantItem from "./RestaurantItem";
+import RestaurantList from "./RestaurantList";
 
 const SearchSection = Styled.section``;
 
@@ -16,7 +16,7 @@ const FilterNav = Styled.header`
 `;
 
 const SearchResults = Styled.main`
-  margin: 36px 64px 242px ;
+  margin: 36px 32px 242px 64px;
 `;
 
 const ResultsTitle = Styled.h2`
@@ -25,10 +25,6 @@ const ResultsTitle = Styled.h2`
   margin: 42px 0 64px;
   letter-spacing: 1px;
   line-height: 40px;
-`;
-
-const RestaurantList = Styled.ul`
-  display: flex;
 `;
 
 const resultsTitle = "All Restaurants";
@@ -40,9 +36,7 @@ const Home = () => (
       <FilterNav />
       <SearchResults>
         <ResultsTitle>{resultsTitle}</ResultsTitle>
-        <RestaurantList>
-          <RestaurantItem />
-        </RestaurantList>
+        <RestaurantList />
       </SearchResults>
     </SearchSection>
   </>

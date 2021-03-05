@@ -6,7 +6,9 @@ import { Link } from "@reach/router";
 const Item = Styled.li`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 80px;
+  margin-right: 32px;
   padding: 0;
   width: 304px;
 `;
@@ -15,6 +17,11 @@ const Image = Styled.img`
   background: #d8d8d8;
   height: 228px;
   width: 304px;
+`;
+
+const Details = Styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const Name = Styled.h3`
@@ -50,12 +57,14 @@ const learnMore = "Learn More";
 
 const RestaurantItem = ({ id, name, image, imageAlt }) => (
   <Item>
-    <Image src={image} alt={imageAlt} />
-    <Name>{name}</Name>
-    <Rating />
-    <Cuisine />
-    <Price />
-    <Status />
+    <Details>
+      <Image src={image} alt={imageAlt} />
+      <Name>{name}</Name>
+      <Rating />
+      <Cuisine />
+      <Price />
+      <Status />
+    </Details>
     <LearnMoreLink to={`/details/${id}`}>{learnMore}</LearnMoreLink>
   </Item>
 );

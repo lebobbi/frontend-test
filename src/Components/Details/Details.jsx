@@ -7,9 +7,9 @@ const ReviewSection = Styled.section``;
 
 const Details = ({ restaurantId }) => (
   <>
-    <Header />
-    <MapSection />
-    <ReviewSection />
+    <Header restaurantId={restaurantId} />
+    <MapSection restaurantId={restaurantId} />
+    <ReviewSection restaurantId={restaurantId} />
   </>
 );
 

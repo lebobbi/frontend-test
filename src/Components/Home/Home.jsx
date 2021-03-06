@@ -37,8 +37,8 @@ const Home = () => (
       <SearchResults>
         <ResultsTitle>{resultsTitle}</ResultsTitle>
         <RestaurantList />
+        <LoadMoreButton>{loadMore}</LoadMoreButton>
       </SearchResults>
-      <LoadMoreButton>{loadMore}</LoadMoreButton>
     </SearchSection>
   </>
 );

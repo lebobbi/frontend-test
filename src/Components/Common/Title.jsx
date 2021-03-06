@@ -6,6 +6,6 @@ export default Styled.h1`
   font-weight: normal;
   line-height: 64px;
   letter-spacing: 0.964286px;
-  margin: 0 0 24px;
+  margin: 0 0 16px;
   text-align: left;
 `;

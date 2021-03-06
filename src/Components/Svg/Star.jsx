@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Star = ({ type }) => {
+const Star = ({ type, size }) => {
   const pathProps =
     type === "complete" ? { fill: "#002B56" } : { stroke: "#002B56" };
   return (
     <svg
-      width="20"
-      height="20"
+      width={size}
+      height={size}
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +25,8 @@ const Star = ({ type }) => {
         <>
           <mask
             id="mask0"
-            width="20"
-            height="20"
+            width={size}
+            height={size}
             x="0"
             y="0"
             maskUnits="userSpaceOnUse"
@@ -48,10 +48,12 @@ const Star = ({ type }) => {
 
 Star.defaultProps = {
   type: "complete",
+  size: 20,
 };
 
 Star.propTypes = {
   type: PropTypes.oneOf(["half", "complete", "hollow"]),
+  size: PropTypes.number,
 };
 
 export default Star;

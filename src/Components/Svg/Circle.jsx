@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Circle = ({ className, active }) => (
+const Circle = ({ className, active, size }) => (
   <svg
     className={className}
-    width="8"
-    height="8"
+    width={size}
+    height={size}
     viewBox="0 0 8 8"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -21,11 +21,13 @@ const Circle = ({ className, active }) => (
 
 Circle.defaultProps = {
   active: false,
+  size: 8,
   className: "",
 };
 
 Circle.propTypes = {
   active: PropTypes.bool,
+  size: PropTypes.number,
   className: PropTypes.string,
 };
 

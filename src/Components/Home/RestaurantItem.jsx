@@ -4,7 +4,7 @@ import Styled from "styled-components";
 import { Link } from "@reach/router";
 
 import Information from "./Information";
-import { Rating } from "~/src/Components/Common";
+import { Rating, Image } from "~/src/Components/Common";
 import { buttonStyles } from "~/src/Components/Common/Button";
 
 const Item = Styled.li`
@@ -14,12 +14,6 @@ const Item = Styled.li`
   margin-bottom: 80px;
   margin-right: 32px;
   padding: 0;
-  width: 304px;
-`;
-
-const Image = Styled.img`
-  background: #d8d8d8;
-  height: 228px;
   width: 304px;
 `;
 
